@@ -1,0 +1,339 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto", sans-serif;	
+}
+
+.background{
+	background: url(../Slike/Background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.input1{
+	display: none;
+	font-size: 20px;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+}
+
+.book{
+  top:20%;
+  position: relative; 
+}
+
+.flip-book{
+	width: 400px;
+	height: 500px;
+	position: relative;
+	perspective: 1500px;
+}
+
+.flip{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition: .5s;
+	color: #000;
+}
+
+p{
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.center{
+	text-align: center;
+}
+
+.front{
+	position: fixed;
+	width: 120%;
+	height: 120%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+.back{
+	position: absolute;
+	width: 122%;
+	height: 120%;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+.back1{
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	background: rgb(255, 255, 255);
+	border-right: 6px solid rgb(0, 0, 0);
+}
+
+.next-btn{
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: rgb(216, 25, 19);
+}
+
+/*	.next-btn:hover{
+		color: black;
+	}
+*/
+
+.next-btnFrontPage{
+	font-weight: bold;
+	font-size: 25px;
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+}
+
+.next-btnFrontPage:hover{
+	color: black;
+}
+
+.back-btn{
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	bottom: 13px;
+	left: 13px;
+	cursor: pointer;
+	color: rgb(216, 25, 19);
+}
+.back-btn:hover{
+	color: black;
+}
+
+.back-btnBackPage{
+	font-weight: bold;
+	font-size: 25px;
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+}
+
+.back-btnBackPage:hover{
+	color: black;
+}
+
+#p1{
+	z-index: 3;
+}
+
+#p2{
+	z-index: 2;
+}
+
+#p3{
+	z-index: 1;
+}
+
+#p4{
+	z-index: 0;
+}
+
+#p5{
+	z-index: -1;
+}
+
+#c1:checked ~ .flip-book #p1{
+	transform: rotateY(-180deg);
+	z-index: 1;
+}
+
+#c2:checked ~ .flip-book #p2{
+	transform: rotateY(-180deg);
+	z-index: 2;
+}
+
+#c3:checked ~ .flip-book #p3{
+	transform: rotateY(-180deg);
+	z-index: 3;
+}
+
+#c4:checked ~ .flip-book #p4{
+	transform: rotateY(-180deg);
+	z-index: 4;
+}
+
+#c5:checked ~ .flip-book #p5{
+	transform: rotateY(-180deg);
+	z-index: 5;
+}
+
+/*------------------------------------*/
+
+.form{
+	position: absolute;
+	bottom: 13px;
+}
+
+.textbackground{
+     background: white;
+	 border-radius: 15px;
+	 color:black;
+}
+
+.autoform{
+	position: absolute;
+	bottom: 180px;
+	color:white;
+	font-size: 18px;
+	left: 29%;
+}
+
+.inputcenter{
+	position: absolute;
+	bottom: -50px;
+	color:white;
+	font-size: 18px;
+	left: 10%;
+	font-weight: bold;
+	font-size: 23px;
+}
+
+.autoform1{
+	position: absolute;
+	bottom: 180px;
+	color:white;	
+	font-size: 18px;
+	left: 54%;
+	
+}
+
+input[type=radio]{
+	width: 50px;
+	height:30px;
+}
+
+#searchBox{
+	width: 50%;
+	height: 65px;
+	border: 2px solid #fff;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+#input{
+	width:80%;
+	border: none;
+	outline: none;
+	padding: 0 15px;
+}
+
+.searchBtn{
+	width: 20%;
+	font-size: 20px;
+}
+
+.searchBtn:hover{
+	color: rgb(255, 15, 15);
+	cursor: pointer;
+}
+
+::selection{ 
+	background-color: #476f30; 
+	color: #fff; 
+}
+
+mark{
+	background-color: rgb(41, 121, 240);
+	color:none;
+}
+
+/*---------------------------------------*/
+
+#popup{
+	padding: 10px;
+	border-radius: 30px;
+	position: absolute; 
+	width: 600px;
+  	top: 70%; 
+	background-color: white;
+	display: block;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.7s;
+	transition: opacity 0.7s;
+}
+
+.popupFont{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.closebtn{
+	padding: 4px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    float: right;
+    font-size: 30px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 1px;
+}
+
+.closebtn:hover{
+	color: rgb(255, 0, 0);
+}
+
+.button{
+	border-radius:30px;
+	background:#000;
+	color:white;
+	font-size: 30px;
+	cursor:grab;	
+}
+
+.button:hover{
+	color: rgb(255, 15, 15);
+}
+
+.highlight{
+
+	background-color: rgba(255, 115, 0, 0.538);
+}
+
+.LastPage{
+	color: black;
+	text-decoration: none;
+}
+
+.LastPage:hover{
+	color: red;
+}

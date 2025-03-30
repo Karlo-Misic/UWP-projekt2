@@ -1,0 +1,13 @@
+http://localhost/test//Knjižnica/HTML/GlavnaStranica.html
+
+http://localhost/test//Knjižnica/Baza/connection.php
+
+Ngrok
+
+test//Knjižnica/HTML/GlavnaStranica.html
+
+https://0601-78-3-18-56.eu.ngrok.io/test//Knji%C5%BEnica/HTML/GlavnaStranica.html
+
+ngrok http 80 --region eu
+
+ngrok http -region eu 80

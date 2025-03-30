@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Knjižnica</title>
+<link rel="stylesheet" href="..//Style/styleGlavnaStranica.css">
+<meta name="description" content="Knjižnica">
+<meta name="author" content="Karlo Mišić">
+<link rel="icon" href="..//Slike/Icon.png">
+</head>
+<body class="background">
+
+	<ul>
+		<div class="alert" id="mydiv">DOBRODOŠLI!</div>
+		<div id="border">
+			<div>
+				<button class="login" onclick="document.getElementById('id01').style.display='block'" type="button" name="login">Prijava</button>
+			</div>
+			<div>
+				<button class="registration" onclick="document.getElementById('id02').style.display='block'" type="button" name="registration">Registracija</button>
+			</div>
+		</div>
+    </ul>
+    
+    <div class="person" name="sakri1">
+		<a href="AntunBrankoŠimić.html">	
+			<div class="container">
+		 		<div class="container-inner">
+					<img class="circle"/>			
+					<img class="img img1" src="..//Slike/AntunBrankoSimicPrednjaKorica.jpg"/>
+		  		</div>
+	    </a>
+			</div>	
+		<div class="divider"></div>
+		<a href="AntunBrankoŠimić.html"> <div class="name">Sabrane pjesme</div></a>
+		<a href="AntunBrankoŠimić.html"> <div class="title" title="Antun Branko Šimić" > &nbsp; &nbsp; Antun Branko Šimić &nbsp; &nbsp;</div></a>
+	</div>
+
+	<div class="person" name="sakri2">
+		<a href="VladimirVidrić.html">
+			<div class="container">
+		  		<div class="container-inner">
+					<img class="circle"/>
+					<img class="img img2" src="..//Slike/VladimirVidrićPrednjaKorica.jpg"/>
+		 		</div>
+		</a>
+			</div>
+		<div class="divider"></div>
+		<a  href="VladimirVidrić.html"><div class="name">Pjesme</div></a>
+		<a href="VladimirVidrić.html"><div class="title" title="Vladimir Vidrić" > &nbsp; &nbsp; Vladimir Vidrić &nbsp; &nbsp;</div></a>
+	</div>
+
+	<div class="person" name="sakri3">
+		<a href="AntunGustavMatoš.html">
+			<div class="container">
+			  	<div class="container-inner">
+					<img class="circle"/>
+					<img class="img img3" src="..//Slike/AntunGustavMatošPrednjaKorica.jpg"/>
+			  	</div>
+		</a>
+			</div>
+		<div class="divider"></div>
+		<a href="AntunGustavMatoš.html"><div class="name">Pjesme</div></a>
+		<a href="AntunGustavMatoš.html"><div class="title" title="Antun Gustav Matoš" > &nbsp; &nbsp; Antun Gustav Matoš &nbsp; &nbsp;</div></a>	
+	</div>
+
+	<div id="id02" class="modal">
+		<button onclick="document.getElementById('id02').style.display='none'" class="close" name="closeregistration">× </button>
+			<div class="registrationForm">  
+				<form method="POST" action="..//Baza/signup.php" id="center">
+			 		<table id="center">
+			 		  	<tr>
+							<td>Ime :</td>
+							<td><input maxlength="20" type="text" name="username" placeholder="Unesi korisničko ime" onkeydown="keyDown(event)"  title ="Molim upišite traženi podatak" oninput="this.value=this.value.replace(/[^a-zA-Z0-9-_]/g, '')" required></td>
+			  			</tr>
+						  <td>Lozinka :</td>
+						  <td>
+							  <div class="password-container">
+								  <input maxlength="20" type="password" name="password" id="id_password" placeholder="Unesi lozinku" onkeydown="keyDown(event)" title="Molim upišite traženi podatak" oninput="this.value=this.value.replace(/[^a-zA-Z0-9]/g, '')" required>
+								  <img src="../Slike/eye1.png" id="togglePassword" class="eye">
+							  </div>
+						  </td>
+			  			<tr>
+							<td>Spol :</td>
+							<td>
+								<input type="radio" name="gender" value="m" required>Muško
+						 		<input type="radio" name="gender" value="f" required>Žensko
+							</td>
+			  			</tr>
+			  			<tr>
+							<td>Email :</td>
+							<td><input maxlength="25" type="email" name="email" placeholder="Unesi email" onkeydown="keyDown(event)" title ="Molim upišite traženi podatak" oninput="this.value=this.value.replace(/[^A-Za-z0-9@.]/g, '')" required></td>
+			  			</tr> 
+			  			<tr>
+							<td>Mobitel :</td>
+							<td>
+						 		<select class="select" type="phoneCode" name="phoneCode" required>
+				  					<option selected hidden value="">Pozivni broj </option>
+						 			<option value="091">091</option>
+						  			<option value="092">092</option>
+						  			<option value="095">095</option>
+						  			<option value="097">097</option>
+						  			<option value="098">098</option>
+						  			<option value="099">099</option>
+								</select>
+						 		<input maxlength="7" type="phone" type="phone" name="phone" placeholder="Unesi broj telefona" required pattern="[0-9]{7}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" title ="Molim upišite traženi podatak" >
+							</td>
+			  			</tr>
+			  		</table>
+			 		 	<p></p>
+						<input type="checkbox"> Ostani prijavljen
+						<p>Stvaranjem računa pristajete na naše <a id="decoration" href="#">Uvjete i privatnost</a>.</p>              
+						<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn" name="closeregistration1">Odustani</button>
+						<button type="submit" value="Submit" name="submit" class="signupbtn" href="GlavnaStranica.html">Registriraj se</button>
+				</form> 
+			</div>
+	</div>
+
+	<div id="id01" class="modal">
+		<button onclick="document.getElementById('id01').style.display='none'" class="close" name="closelogin">× </button>
+			<div class="loginForm" id="center">
+				<form method="POST" action="..//Baza/login.php">
+			 		<table id="center">
+			  			<tr>
+							<td>Korisnicko ime :</td>
+							<td><input maxlength="50" type="text" name="login" placeholder="Unesi korisničko ime" onkeydown="keyDown(event)" title ="Molim upišite traženi podatak" oninput="this.value=this.value.replace(/[^a-zA-Z0-9-_@.]/g, '')" required></td>
+			  			</tr> 
+			  			<tr>
+							<td>Lozinka :</td>
+							<td>
+								<div class="password-container">
+									<input maxlength="20" type="password" name="password" id="id_password1"  placeholder="Unesi lozinku" onkeydown="keyDown(event)" title ="Molim upišite traženi podatak" oninput="this.value=this.value.replace(/[^a-zA-Z0-9]/g, '')" required>
+									<img src="../Slike/eye1.png" id="togglePassword1" class="eye1">
+								</div>
+							</td>
+			 	  		</tr>
+			 	 	</table>
+							</br>
+						<input type="checkbox"> Ostani prijavljen
+						<p>Nisi registriran? <a id="decoration" name="registrirajSe" onclick="document.getElementById('id02').style.display='block'"><span onclick="document.getElementById('id01').style.display='none'">Registriraj se</span></a>.</p>  
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" name="closelogin1">Odustani</button>            
+						<button type="submit" value="Submit" name="submit" class="loginbtn" href="GlavnaStranicaPhP.php">Prijavi se</button>
+				</form>
+			</div>
+	</div>
+	<div>
+		<img src="../Slike/chat.png" id="chat-icon" class="img_chat" title="Napišite poruku">
+	</div>
+	<div id="message-window" class="message-window">
+		<div id="chat"></div>
+		<textarea placeholder="Napišite poruku..." class="textarea"></textarea>
+		<div id="button" class="buttonsnd">
+			<img src="../Slike/send.png" alt="Send" class="button-img">
+			<img src="../Slike/send1.png" alt="Send Hover" class="button-hover-img">
+		</div>		
+	</div>
+	
+
+	<div id="popup">
+		<span class="closebtn">&times;</span> 
+	  	<p class="popupFont">Potrebna registracija da bi se dobio puni pristup biblioteci</p>
+	</div>
+
+	<script type ="text/javascript" src = "..//JavaScript/JavaScriptGlavnaStranica.js"></script>
+
+</body>
+</html>
